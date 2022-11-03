@@ -1,5 +1,7 @@
 Flask
 gunicorn
 Flask-SocketIO
-eventlet
+
 gevent-websocket
+https://github.com/eventlet/eventlet/archive/master.zip
+
