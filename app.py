@@ -1,10 +1,9 @@
-
+from flask import Flask, render_template, request, session
 from flask_socketio import SocketIO, emit, join_room
-import eventlet
-import requests
-import time
-from flask import Flask , render_template, session, request, jsonify
-eventlet.monkey_patch()
+import gevent
+from gevent.pywsgi import WSGIServer
+
+
 app = Flask(__name__)
 app.secret_key = 'random secret key!'
 socketio = SocketIO(app, cors_allowed_origins="*")
